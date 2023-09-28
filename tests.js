@@ -1,3 +1,18 @@
+// Unit test for isFive
+describe('isFive', function() {
+    it('should be a defined function', function () {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a boolean when called', function() {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it('should return true when called with argument 5', function() {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return false when called with argument "5"', function () {
+        expect(isFive("5")).toBe(false)
+    });
+});
 // Unit test for sayHello
 describe('sayHello', function() {
     it('should be a defined function', function () {
@@ -14,6 +29,9 @@ describe('sayHello', function() {
     });
     it('should return the string "Hello, Pat!" when executed', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
+    });
+    it('should return the string "Hello, World!" when executed', function (){
+        expect(sayHello()).toBe("Hello, World!")
     });
 });
 
